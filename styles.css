@@ -1,0 +1,751 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    align-items: center;
+    color: #212529;
+}
+
+.index-background {
+    background: url('backgrounds/PPIndexBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.order-background {
+    background: url('backgrounds/FoodOrderBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.insert-background {
+    background: url('backgrounds/InsertBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.display-background {
+    background: url('backgrounds/DisplayBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.report-background {
+    background: url('backgrounds/ReportBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.feedback-background {
+    background: url('backgrounds/FeedbackBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-background {
+    background: url('backgrounds/LoginBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.editstudent-background {
+    background: url('backgrounds/editInfoBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.recipes-background {
+    background: url('backgrounds/recipesBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.menu-background {
+    background: url('backgrounds/menuBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.inventory-background {
+    background: url('backgrounds/InventoryBG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+.tablestyles {
+    background-color: #ffffff; /* Set the background color to white */
+    width: 75%; /* Set the table width to 75% of the screen */
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: separate; /* Changed from collapse to separate for rounded corners */
+    border-spacing: 0; /* Remove spacing between table cells */
+    border: 3px solid #FF6600; /* Set the table border */
+    border-radius: 10px; /* Rounded edges for the entire table */
+    overflow: hidden; /* Ensure the border radius is applied */
+}
+
+    .tablestyles th, .tablestyles td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .tablestyles th {
+        background-color: #f2f2f2;
+        text-align: left;
+    }
+
+        .tablestyles th:first-child,
+        .tablestyles td:first-child {
+            border-left: none;
+        }
+
+        .tablestyles th:last-child,
+        .tablestyles td:last-child {
+            border-right: none;
+        }
+
+    .tablestyles tr:first-child th:first-child {
+        border-top-left-radius: 10px;
+    }
+
+    .tablestyles tr:first-child th:last-child {
+        border-top-right-radius: 10px;
+    }
+
+    .tablestyles tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+    }
+
+    .tablestyles tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
+    }
+
+.main-content {
+    flex: 1; /* Take remaining space */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+h1, h2, h3 {
+    color: #FF6600;
+    font-weight: bold; /* Make the text bold */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black shadow */
+    padding: 10px; /* Padding for better visual appearance */
+}
+
+img {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.about-us-img {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+    .about-us-img img {
+        opacity: 0;
+        transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    }
+
+    .about-us-img:hover img {
+        opacity: 1;
+    }
+
+.top-right-button {
+    width: 20%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.top-left-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+}
+
+.textfloat {
+    font-weight: bold; /* Make the text bold */
+    background-color: rgba(211, 211, 211, 0.75); /* Light grey background with 75% opacity */
+    padding: 10px; /* Padding for better visual appearance */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Custom navbar styles */
+.navbar {
+    background-color: #0074AF; /* Updated to match the required color */
+    padding: 0;
+    height: 120px;
+}
+
+    .navbar .container-fluid {
+        background-color: #0074AF;
+        height: 120px;
+    }
+
+    .navbar .navbar-brand {
+        color: #0074AF !important;
+        display: flex;
+        align-items: center;
+    }
+
+        .navbar .navbar-brand .logo {
+            margin-right: 10px;
+            width: auto;
+            height: 120px;
+        }
+
+    .navbar .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    .navbar .nav-item {
+        flex: 1;
+        text-align: center;
+    }
+
+    /* Glossy effect for navbar buttons */
+    .navbar .nav-link {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 18px; /* Adjust the size as needed */
+        color: #0F2956 !important; /* Dark blue color */
+        padding: 15px 20px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, #FF6600 0%, #e65c00 100%); /* Orange to dark orange gradient */
+        border: outset; /* Outset border effect */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        margin: 0 10px; /* Spacing between buttons */
+        border-radius: 12px; /* Rounded corners */
+        position: relative; /* Required for the glossy effect */
+        overflow: hidden; /* Hide the glossy overlay outside the button */
+    }
+
+        .navbar .nav-link:hover {
+            color: #f8f9fa !important;
+            background: linear-gradient(to bottom, #FF7733 0%, #cc5200 100%); /* Lighter orange on hover */
+        }
+
+        .navbar .nav-link:active {
+            background: linear-gradient(to bottom, #e65c00 0%, #FF6600 100%);
+            box-shadow: 0 3px #666;
+            transform: translateY(4px);
+        }
+
+        /* Glossy overlay */
+        .navbar .nav-link::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 12px; /* Same as button's border radius */
+            pointer-events: none; /* Allow clicks to pass through */
+        }
+
+.dropdown-menu {
+    background-color: #FF6600;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px; /* Adjust the size as needed */
+    color: #0F2956 !important; /* Dark blue color */
+    border: outset; /* Outset border effect */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    color: #0F2956 !important;
+    padding: 15px 20px;
+}
+
+    .dropdown-item:hover {
+        background-color: #e65c00;
+    }
+
+.nav-link.custom-link {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 50px;
+    max-width: 200px;
+    text-align: center;
+}
+
+    .nav-link.custom-link:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    .nav-link.custom-link:active {
+        transform: translateY(1px);
+    }
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form table {
+    width: 100%;
+}
+
+    form table th, form table td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    form table th {
+        background-color: #e9ecef;
+    }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"],
+form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #ff6600; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    form input[type="submit"]:hover {
+        background-color: #e65c00;
+        transform: translateY(-2px);
+    }
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #e9ecef;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.sideForms {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggleButton {
+    margin-bottom: 10px; /* Add some space between toggle buttons */
+}
+
+.backupForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backupButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonContainer button,
+.buttonContainer input[type="submit"] {
+    width: 250px; /* Set a fixed width for all buttons */
+    height: 50px; /* Set a fixed height for all buttons */
+    margin: 5px 0; /* Add margin to separate the buttons */
+    font-size: 16px; /* Adjust the font size if needed */
+    text-align: center; /* Center the text */
+    background-color: #FF6600; /* Set the background color */
+    color: #FFFFFF; /* Set the text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add cursor pointer on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Add some space between the icon and the text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+    .buttonContainer button:hover,
+    .buttonContainer input[type="submit"]:hover {
+        background-color: #e65c00; /* Change background color on hover */
+        transform: translateY(-2px); /* Add hover effect */
+    }
+
+    .buttonContainer button:active,
+    .buttonContainer input[type="submit"]:active {
+        transform: translateY(1px); /* Add a small "pressed" effect */
+    }
+
+.button {
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width: 80px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white; /* Assuming white text */
+    background-color: #ff6600; /* Same orange color */
+}
+
+.buttonBack {
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width: 200px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white; /* Assuming white text */
+    background-color: #ff6600; /* Same orange color */
+}
+
+
+    .button:hover {
+        transform: translateY(-2px);
+    }
+
+.button-info {
+    background-color: #ffc107; /* Bootstrap warning yellow */
+    color: black;
+}
+
+    .button-info:hover {
+        background-color: #e0a800;
+    }
+
+.button-edit {
+    background-color: #17a2b8; /* Bootstrap info blue */
+    color: white;
+}
+
+    .button-edit:hover {
+        background-color: #138496;
+    }
+
+.button-delete {
+    background-color: #dc3545; /* Bootstrap danger red */
+    color: white;
+}
+
+    .button-delete:hover {
+        background-color: #c82333;
+    }
+
+.printButton {
+    background-color: #ff6600; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .printButton:hover {
+        background-color: #e65c00;
+        transform: translateY(-2px);
+    }
+
+.toggleButton {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0;
+}
+
+    .toggleButton:hover {
+        background-color: #e65c00;
+        transform: translateY(-2px);
+    }
+
+.header {
+    width: 100%;
+    background-color: #0074AF; /* Blue header */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer {
+    background-color: #343a40; /* Dark grey footer */
+    color: white;
+    padding-top: 10px; /* Add some space above the footer */
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the footer content */
+    align-items: center; /* Vertically align items */
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    max-width: 1200px; /* Adjust as necessary */
+    width: 100%;
+    justify-content: space-between; /* Space between logo and text */
+    padding: 0 20px; /* Add some padding */
+}
+
+.footer-logo {
+    height: 100px; /* Set the height to 120px */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center text */
+    flex: 1; /* Allow text to take remaining space */
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+.container {
+    text-align: center;
+    width: 100%;
+    height: 75vh; /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fluid {
+    background-color: #0074AF;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    .print-logo {
+        display: none;
+    }
+
+    .print-only {
+        display: block;
+    }
+}
+
+.error-message {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success-message {
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.debug-output {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.error-container {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.success-message {
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.page-content {
+    background-color: rgba(211, 211, 211, 0.75); /* Light grey background with 75% opacity */
+    padding: 10px; /* Padding for better visual appearance */
+    border-radius: 10px; /* Rounded corners */
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.container.main-content {
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Ensures the container takes up the remaining space */
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recipe-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: scroll;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Optional: Adds a border to visually separate the container */
+    padding: 10px; /* Optional: Adds padding inside the container */
+}
+
+/* Additional styles for recipes */
+.recipe {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+    .recipe img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .recipe h2 {
+        color: #FF6600;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+    .recipe p {
+        color: #212529;
+    }
+
+    .recipe ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .recipe li {
+        background-color: rgba(211, 211, 211, 0.75);
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+.table-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: scroll;
+    width: 1500px;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Optional: Adds a border to visually separate the container */
+    padding: 10px; /* Optional: Adds padding inside the container */
+}
+
+.feedback-table-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: scroll;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Optional: Adds a border to visually separate the container */
+    padding: 10px; /* Optional: Adds padding inside the container */
+}
+
+    .feedback-table-container table textarea {
+        width: 100%;
+        border: none;
+        resize: none;
+        background: none;
+    }
